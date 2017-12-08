@@ -29,11 +29,11 @@ else()
     set(CXX_FLAGS "-std=c++11")
   endif()
 endif()
-
+message(${EMsoft_SDK}/superbuild/${extProjectName})
 ExternalProject_Add(${extProjectName}
   #DOWNLOAD_NAME ${extProjectName}-${CLFORTRAN_VERSION}.tar.gz
   #URL ${CLFORTRAN_URL}
-  GIT_REPOSITORY http://www.github.com/bluequartzsoftware/clfortran
+  GIT_REPOSITORY https://www.github.com/ZachClayburn/clfortran
   GIT_TAG "develop"
   TMP_DIR "${EMsoft_SDK}/superbuild/${extProjectName}/tmp/${CMAKE_BUILD_TYPE}"
   STAMP_DIR "${EMsoft_SDK}/superbuild/${extProjectName}/Stamp/${CMAKE_BUILD_TYPE}"
